@@ -4,7 +4,7 @@ class contactusPage{
     elements ={
     
     
-    firstName : () =>  cy.get('input[name="firstname"]'),
+    firstName : () =>  cy.get("input[name='firstname']"),
 
     lastName : () => cy.get('input[name="lastname"]'),
     
@@ -17,41 +17,41 @@ class contactusPage{
 
     
     
-   submitButton : () => cy.get("input[type='submit']"),
+   sendMessageButton : () => cy.get("input[type='submit']"),
 
    selectDropsdown : () =>cy.xpath("//div[@class='input']//select[1]"),
 
     
-   InvalidInputerror : () => cy.xpath('//label[text()="Please complete all required fields."]')
-    
-    
+   InvalidInputerror : (text) => cy.xpath(`//label[text()="${text}"]`),
+
+      
     }
     
     
-   submitEnquiry(){
+//    submitEnquiry(){
     
     
-   this.elements.firstName().type("Spandana");
+//    this.elements.firstName().type("Spandana");
     
     
-   this.elements.lastName().type("Mantripragada")
+//    this.elements.lastName().type("Mantripragada")
     
     
-   this.elements.email().type("testemail@gmail.com")
+//    this.elements.email().type("testemail@gmail.com")
     
     
-   this.elements.mobileNumber().type("9000890987")
+//    this.elements.mobileNumber().type("9000890987")
     
     
-   this.elements.selectDropsdown().select("LinkedIn")
+//    this.elements.selectDropsdown().select("LinkedIn")
 
-   this.elements.message().type("Test message");
+//    this.elements.message().type("Test message");
 
-   this.elements.submitButton().click();
+//    this.elements.submitButton().click();
 
     
     
-   }
+//    }
     
     
     }

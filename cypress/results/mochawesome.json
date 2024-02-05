@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-02-05T05:45:28.145Z",
+    "end": "2024-02-05T05:45:52.911Z",
+    "duration": 24766,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "e24a8d46-8073-45f6-ae5b-460cc9bb7720",
+      "title": "",
+      "fullFile": "cypress\\e2e\\contactusTests.cy.js",
+      "file": "cypress\\e2e\\contactusTests.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6775001b-3578-41b4-a386-3385dd7fce63",
+          "title": "contactUs Page Tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "loads the contact page and has the correct title",
+              "fullTitle": "contactUs Page Tests loads the contact page and has the correct title",
+              "timedOut": null,
+              "duration": 5503,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.title().should(\"eq\", \"Reach out to Founder and Lightning today\");",
+              "err": {},
+              "uuid": "3fb652ec-e253-4ffd-84e9-0d2573046eca",
+              "parentUUID": "6775001b-3578-41b4-a386-3385dd7fce63",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "checks for required fields in the contact form and submit",
+              "fullTitle": "contactUs Page Tests checks for required fields in the contact form and submit",
+              "timedOut": null,
+              "duration": 6324,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_contactuspage.default.elements.firstName().invoke('prop', 'validationMessage').should('equal', 'Please fill out this field.');\n_contactuspage.default.elements.firstName().type('Spandana');\n_contactuspage.default.elements.lastName().invoke('prop', 'validationMessage').should('equal', 'Please fill out this field.');\n_contactuspage.default.elements.lastName().type(\"mantri\");\n_contactuspage.default.elements.email().invoke('prop', 'validationMessage').should('equal', 'Please fill out this field.');\n_contactuspage.default.elements.email().type(\"testxyz@gmail.com\");\n_contactuspage.default.elements.mobileNumber().invoke('prop', 'validationMessage').should('equal', 'Please fill out this field.');\n_contactuspage.default.elements.mobileNumber().type(\"9000000000\");\n_contactuspage.default.elements.message().invoke('prop', 'validationMessage').should('equal', 'Please fill out this field.');\n_contactuspage.default.elements.message().type(\"Test Message\");\n_contactuspage.default.elements.sendMessageButton().click();",
+              "err": {},
+              "uuid": "2b5eea4e-819d-4113-85d7-d09eb579298c",
+              "parentUUID": "6775001b-3578-41b4-a386-3385dd7fce63",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "prevents form submission with invalid data (incorrect format) and insifficient data",
+              "fullTitle": "contactUs Page Tests prevents form submission with invalid data (incorrect format) and insifficient data",
+              "timedOut": null,
+              "duration": 8768,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_contactuspage.default.elements.firstName().type(\"John\");\n_contactuspage.default.elements.email().type(\"testxyz.com\");\n_contactuspage.default.elements.InvalidInputerror(\"Email must be formatted correctly.\").should('have.text', 'Email must be formatted correctly.');\n_contactuspage.default.elements.mobileNumber().type(\"91\");\n_contactuspage.default.elements.InvalidInputerror(\"The number you entered is not in range.\").should('have.text', 'The number you entered is not in range.');\n_contactuspage.default.elements.mobileNumber().type(\"aabb\");\n_contactuspage.default.elements.InvalidInputerror(\"A valid phone number may only contain numbers, +()-. or x\").should('have.text', 'A valid phone number may only contain numbers, +()-. or x');\n_contactuspage.default.elements.sendMessageButton().click();\n_contactuspage.default.elements.InvalidInputerror(\"Please complete all required fields.\").contains(\"Please complete all required fields.\");",
+              "err": {},
+              "uuid": "02a0d8f2-283f-4a4f-8814-0dc870874fa5",
+              "parentUUID": "6775001b-3578-41b4-a386-3385dd7fce63",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3fb652ec-e253-4ffd-84e9-0d2573046eca",
+            "2b5eea4e-819d-4113-85d7-d09eb579298c",
+            "02a0d8f2-283f-4a4f-8814-0dc870874fa5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 20595,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "junit": false
+      },
+      "version": "6.2.0"
+    }
+  }
+}
