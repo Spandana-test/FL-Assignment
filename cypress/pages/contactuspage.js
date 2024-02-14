@@ -1,37 +1,34 @@
-class contactusPage{
+class contactusPage {
+  getfirstName() {
+    return cy.get("input[name='firstname']");
+  }
+  getLastName() {
+    return cy.get('input[name="lastname"]');
+  }
 
+  getemail() {
+    return cy.get("input[name='email']");
+  }
 
-    elements ={
-    
-    
-    firstName : () =>  cy.get("input[name='firstname']"),
+  getmobileNumber() {
+    return cy.get("input[name='mobilephone']");
+  }
 
-    lastName : () => cy.get('input[name="lastname"]'),
-    
-    
-    email : () => cy.get("input[name='email']"),
-    
-    mobileNumber : () => cy.get("input[name='mobilephone']"),
-    
-    message : () => cy.get("textarea[name='message']"),
+  getmessage() {
+    return cy.get("textarea[name='message']");
+  }
 
-    
-    
-   sendMessageButton : () => cy.get("input[type='submit']"),
+  getsendMessageButton() {
+    return cy.get("input[type='submit']");
+  }
 
-   selectDropsdown : () =>cy.xpath("//div[@class='input']//select[1]"),
+  gethearAboutUsDropdown() {
+    return cy.xpath("//div[@class='input']//select[1]");
+  }
 
-    
-   InvalidInputerror : (text) => cy.xpath(`//label[text()="${text}"]`),
+  getinvalidInputError(text) {
+    return cy.xpath(`//label[text()="${text}"]`);
+  }
+}
 
-      
-    }
-    
-    
-
-    
-    
-    }
-    module.exports = new contactusPage();
-
-   
+module.exports = new contactusPage();
